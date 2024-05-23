@@ -37,7 +37,9 @@ function ListPage() {
         .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       setBestItems(sortedBest);
       setRecentItems(sortedRecent);
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 5000);
     };
     fetchData();
   }, []);
